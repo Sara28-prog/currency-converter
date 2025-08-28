@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4e4ba;
+}
+.container{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 60vh;
+    width: 90%;
+    /*max-width: 500px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form{
+    margin: 2rem 0 1rem 0;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.select-container{
+    display: flex;
+    border: 1.5px solid #af4d98;
+    border-radius: 0.5rem;
+    max-width: 50vw;
+    overflow: hidden;
+}
+img{
+    height: 3rem;
+}
+select{
+    border: none;
+    outline: none;
+}
+input,#exchange{
+    outline: 1px solid #af4d98;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    
+}
+input:focus, textarea:focus{
+    outline: none;
+    box-shadow: 0 0 0 1.5px #af4d98;
+}
+#exchange{
+    background-color: #af4d98;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: #b13d96;
+}
+#reset{
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    width: 5vw;
+    height: 5vh;
+    align-self: center;
+}
+textarea{
+    resize: none;
+}
+/*Small Phones*/
+@media (max-width: 400px) {
+    .container{
+        min-width: auto;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        min-height: 92vh;
+     }
+    .dropdown{
+        flex-direction: column;
+        gap: 2rem;
+    } 
+    #horizn-icon{
+       content: url(assets/arrow.svg);
+    }
+}
+/*Tablets*/
+@media (min-width: 400px) and (max-width: 768px) {
+    .container{
+        min-width: auto;
+        max-width: 600px;
+        min-height: 90vh;
+    }
+    .dropdown{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #horizn-icon{
+       content: url(assets/arrow.svg);
+    }
+}
+/*Small laptops*/
+@media (min-width: 768px) {
+    .container{
+        min-width:40%;
+        max-width: 600px;
+        max-height: 90vh;
+    }
+    form,button,select,input{
+        gap: 5rem;
+        font-size: 3.5vh;
+    }
+    h1,select,button,input,img{
+        height: 7vh;
+    }
+    h1{
+        font-size: 5vh;
+    }
+}
