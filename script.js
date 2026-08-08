@@ -72,9 +72,9 @@ reset.addEventListener("click", () => {
         let fromToUSD = 1/usdToFrom;
 
         
-        let res2 = await fetch(`${BASE_URL}from=USD&to=${toCurr.value}`);
+        let res2 = await fetch(`${BASE_URL}USD/${toCurr.value}`);
         let data2 = await res2.json();
-        let usdToTarget = data1.rates[toCurr.value];
+        let usdToTarget = data1.rate;
         console.log(usdToTarget);
         
         
