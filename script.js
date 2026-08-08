@@ -12,7 +12,7 @@ let currencyOptions = async () => {
 let res = await fetch(CURRENCY_LIST);
 let allData = await res.json();
 console.log(allData);
-let countryCodes = Object.keys(allData);
+let countryCodes = allData.map(currency => currency.code);
 console.log(countryCodes);
 
 for(let select of dropdowns) {
