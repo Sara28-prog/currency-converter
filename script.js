@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.frankfurter.dev/v2/latest?";
+const BASE_URL = "https://api.frankfurter.dev/v2/rate/";
 const CURRENCY_LIST = "https://api.frankfurter.dev/v2/currencies";
 
 const dropdowns = document.querySelectorAll(".dropdown select");
@@ -58,17 +58,17 @@ reset.addEventListener("click", () => {
 })
     let finalAmount;
     try{
-    const URL = `${BASE_URL}from=${fromCurr.value}&to=${toCurr.value}`;
+    const URL = `${BASE_URL}${fromCurr.value}/${toCurr.value}`;
     let response = await fetch(URL);
     let data = await response.json();
-    let rate = data.rates[toCurr.value];
+    let rate = data.rate;
     console.log(data);
     finalAmount = (amtVal*rate).toFixed(2);
 
     } catch(err) {
-        let res1 = await fetch(`${BASE_URL}from=USD&to=${fromCurr.value}`);
+        let res1 = await fetch(`${BASE_URL}USD/${fromCurr.value}`);
         let data1 = await res1.json();
-        let usdToFrom = data1.rates[fromCurr.value];
+        let usdToFrom = data1.rate;
         let fromToUSD = 1/usdToFrom;
 
         
