@@ -1,5 +1,5 @@
-const BASE_URL = "https://api.frankfurter.app/latest?";
-const CURRENCY_LIST = "https://api.frankfurter.app/currencies";
+const BASE_URL = "https://api.frankfurter.dev/v2/latest?";
+const CURRENCY_LIST = "https://api.frankfurter.dev/v2/currencies";
 
 const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("button");
